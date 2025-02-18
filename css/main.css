@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial;
+}
+
+body {
+    margin: 40px auto;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    margin: 5px;
+}
+
+section {
+    padding: 50px;
+}
+
+section:nth-child(odd) {
+    background-color: aquamarine;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+p {
+    padding: 10px;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.hero,
+.three-rule,
+.gallery-item {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}
+
+figcaption {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-links a:link,
+.main-links a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.main-links a:hover,
+.main-links a:active {
+    background-color: red;
+}

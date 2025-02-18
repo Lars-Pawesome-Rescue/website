@@ -1,0 +1,115 @@
+---
+permalink: /
+data: [adoptable, foster]
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="/bundle.css">
+    <title>Lar's Pawesome Rescue</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>
+        <img src="/public/images/logo.jpg" alt="lar's pawsome rescue" class="hero"/>
+    </h1>
+    <section class="main-links">
+        <nav>
+            <a href="#adopt">Adopt</a>
+            <a href="#foster">Foster</a>
+            <a href="#volunteer">Volunteer</a>
+        </nav>
+    </section>
+
+    <section id="adopt">
+        <h2>Adopt</h2>
+        <p>
+            These dogs are available for adoption!</p>
+        <p>Fill out an adoption form <a href="" https://form.jotform.com/241707018147049">here</a> or send us an email
+            at <a href="mailto:larsspawsomerescue2024@gmail.com">larsspawsomerescue2024@gmail.com</a> and we will send
+            you the application.</p>
+            <div class="gallery">
+            {% for a in adoptable %}
+        
+            <figure>
+                <img src="https:{{ a.fields.image.fields.file.url }}" class="gallery-item" />
+                <figcaption>{{ a.fields.name }} | {{ a.fields.description }}</figcaption>
+            </figure>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="foster">
+        <h2>Foster</h2>
+        <p>
+            These dogs are available for fostering!</p>
+        <p>Fill out the foster form <a href="https://form.jotform.com/241707018147049">here</a> or send us an email
+            at <a href="mailto:larsspawsomerescue2024@gmail.com">larsspawsomerescue2024@gmail.com</a> and we will send
+            you the application.</p>
+            <div class="gallery">
+            {% for a in foster %}
+        
+            <figure>
+                <img src="https://{{ a.fields.image.fields.file.url }}" class="gallery-item" />
+                <figcaption>{{ a.fields.name }} | {{ a.fields.description }}</figcaption>
+            </figure>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section>
+        <h2>About Us</h2>
+        <p>Lars's Pawsome Rescue was established in 2024. We are a nonprofit, 501(c)3 status rescue in Pierce County,
+            WA.</p>
+
+        <p>At Lars's Pawsome Rescue our mission is to provide a sanctuary of hope and healing for dogs that have been
+            abandoned, neglected, abused or just need to get a new chance in life.</p>
+
+        <p>We are dedicated to rescuing, rehabilitating, and finding forever homes for these dogs, ensuring they receive
+            the compassionate care they deserve.</p>
+
+        <p>We know we cannot rescue every dog, but we want to change the life's of the ones we are rescuing.</p>
+
+        <p>We are 100% foster based.</p>
+    </section>
+
+    <section id="volunteer">
+        <h2>Applications</h2>
+
+                <h3><a href="https://form.jotform.com/241707018147049">Foster Application</a></h3>
+                <p>Fostering a dog is a temporary arrangement where a volunteer of our Rescue takes a dog home and takes care of the dog
+                until the dog gets adopted.</p>
+                <h3><a href="https://form.jotform.com/241705143426046">Animal Adoption Interest Form</a></h3>
+                <p>Fill out this form if interested in adopting</p>
+                <h3><a href="https://form.jotform.com/241705143426046">Volunteer Application</a></h3>
+                <p>Fill out this form if interested in volunteering with us</p>
+                <h3><a href="https://form.jotform.com/241706718284057">Rehoming Form</a></h3>
+                <p>Need to rehome an animal? Fill out this form to start the rehoming process</p>
+                <h3><a href="https://www.zeffy.com/donation-form/4b180274-d76e-402d-91a0-31e06f4e45d7">Donations</a></h3>
+                <p>Your donation will help us find homes for more animals!</p>
+                <h3><a href="https://www.amazon.com/hz/wishlist/ls/1HMYL5H13PSTL?ref=cm_sw_em_r_un_un_JbCcMW0XYnzrK">Amazon Wishlist</a></h3>
+                <p>You can also contribute by buying items from our wishlist</p>
+    </section>
+    <section>
+        <h2>Frequently Asked Questions</h2>
+    </section>
+    <section>
+        <h2>333 Rule</h2>
+        <figure>
+            <img src="/public/images/333.jpg" class="three-rule" />
+        </figure>
+    </section>
+</body>
+
+</html>
