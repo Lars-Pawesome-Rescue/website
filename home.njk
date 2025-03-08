@@ -22,13 +22,13 @@ data: [adoptable, foster]
 
 <body>
     <h1>
-        <img src="/public/images/logo.jpg" alt="lar's pawsome rescue" class="hero"/>
+        <img src="/public/images/logo.jpg" alt="lar's pawsome rescue" class="hero" />
     </h1>
     <section class="main-links">
         <nav>
             <a href="#adopt">Adopt</a>
             <a href="#foster">Foster</a>
-            <a href="#volunteer">Volunteer</a>
+            <a href="#forms">Forms</a>
         </nav>
     </section>
 
@@ -39,10 +39,10 @@ data: [adoptable, foster]
         <p>Fill out an adoption form <a href="" https://form.jotform.com/241707018147049">here</a> or send us an email
             at <a href="mailto:larsspawsomerescue2024@gmail.com">larsspawsomerescue2024@gmail.com</a> and we will send
             you the application.</p>
-            <div class="gallery">
+        <div class="gallery">
             {% for a in adoptable %}
-        
-            <figure>
+
+            <figure class="gallery-container">
                 <img src="https:{{ a.fields.image.fields.file.url }}" class="gallery-item" />
                 <figcaption>{{ a.fields.name }} | {{ a.fields.description }}</figcaption>
             </figure>
@@ -57,10 +57,10 @@ data: [adoptable, foster]
         <p>Fill out the foster form <a href="https://form.jotform.com/241707018147049">here</a> or send us an email
             at <a href="mailto:larsspawsomerescue2024@gmail.com">larsspawsomerescue2024@gmail.com</a> and we will send
             you the application.</p>
-            <div class="gallery">
+        <div class="gallery">
             {% for a in foster %}
-        
-            <figure>
+
+            <figure class="gallery-container">
                 <img src="https://{{ a.fields.image.fields.file.url }}" class="gallery-item" />
                 <figcaption>{{ a.fields.name }} | {{ a.fields.description }}</figcaption>
             </figure>
@@ -84,31 +84,197 @@ data: [adoptable, foster]
         <p>We are 100% foster based.</p>
     </section>
 
-    <section id="volunteer">
+    <section id="forms">
         <h2>Applications</h2>
-
-                <h3><a href="https://form.jotform.com/241707018147049">Foster Application</a></h3>
-                <p>Fostering a dog is a temporary arrangement where a volunteer of our Rescue takes a dog home and takes care of the dog
-                until the dog gets adopted.</p>
-                <h3><a href="https://form.jotform.com/241705143426046">Animal Adoption Interest Form</a></h3>
-                <p>Fill out this form if interested in adopting</p>
-                <h3><a href="https://form.jotform.com/241705143426046">Volunteer Application</a></h3>
-                <p>Fill out this form if interested in volunteering with us</p>
-                <h3><a href="https://form.jotform.com/241706718284057">Rehoming Form</a></h3>
-                <p>Need to rehome an animal? Fill out this form to start the rehoming process</p>
-                <h3><a href="https://www.zeffy.com/donation-form/4b180274-d76e-402d-91a0-31e06f4e45d7">Donations</a></h3>
-                <p>Your donation will help us find homes for more animals!</p>
-                <h3><a href="https://www.amazon.com/hz/wishlist/ls/1HMYL5H13PSTL?ref=cm_sw_em_r_un_un_JbCcMW0XYnzrK">Amazon Wishlist</a></h3>
-                <p>You can also contribute by buying items from our wishlist</p>
+        <h3><a href="https://form.jotform.com/241707018147049">Foster Application</a></h3>
+        <p>Fostering a dog is a temporary arrangement where a volunteer of our Rescue takes a dog home and takes care of
+            the doguntil the dog gets adopted.</p>
+        <h3><a href="https://form.jotform.com/241705143426046">Animal Adoption Interest Form</a></h3>
+        <p>Fill out this form if interested in adopting</p>
+        <h3><a href="https://form.jotform.com/241705143426046">Volunteer Application</a></h3>
+        <p>Fill out this form if interested in volunteering with us</p>
+        <h3><a href="https://form.jotform.com/241706718284057">Rehoming Form</a></h3>
+        <p>Need to rehome an animal? Fill out this form to start the rehoming process</p>
+        <h3><a href="https://www.zeffy.com/donation-form/4b180274-d76e-402d-91a0-31e06f4e45d7">Donations</a></h3>
+        <p>Your donation will help us find homes for more animals!</p>
+        <h3><a href="https://www.amazon.com/hz/wishlist/ls/1HMYL5H13PSTL?ref=cm_sw_em_r_un_un_JbCcMW0XYnzrK">Amazon
+                Wishlist</a></h3>
+        <p>You can also contribute by buying items from our wishlist</p>
     </section>
     <section>
         <h2>Frequently Asked Questions</h2>
+        <h3>Fostering</h3>
+
+        <h4>I am interested in fostering!</h4>
+        <p>
+            Start by submitting a foster application. Once we have that and it's approved, one of our volunteer staff
+            will reach out to you. With an approved foster application, you can send us a message if there is a dog you
+            would like to foster.
+        </p>
+        <h4>How long will the dog stay with me?</h4>
+        <p>
+            The dogs will stay in the foster home until adopted. When we have an approved application for your foster
+            dog, we will first contact the applicant and then we will send you the name and phone number to the person
+            who is interested in adopting and you can schedule a meet and greet.
+        </p>
+
+        <h4>I would like to foster, but what if I have a trip planned?</h4>
+        <p>If the foster home has a planned trip, please let us know as soon as possible so we can find a foster home
+            for the duration of the trip</p>
+
+        <h4>What if the foster dog is not a good match?</h4>
+        <p>If the foster dog does not seem to be a good match for the foster parent's home, please contact us and give
+            us some time to find a new foster home. We will try to do our best to find a new foster in a timely manner.
+        </p>
+
+        <h4>What happens when someone wants to adopt the foster animal?</h4>
+        <p>First a meet and greet will happen, which can be at your home, their home or at a park nearby you. If the
+            meet and greet goes well (we will ask you how the meeting went) the adopter will need to contact LPR to
+            receive and sign the trial adoption/adopting agreement. LPR will let you know when we receive the signed
+            document, and you can then schedule the transfer of your foster dog to the adopter. Special arrangements can
+            be made for same day transfer. Please take some pictures of the dog and the new adopter so we can make a
+            post that your foster dog is on a trial adoption.</p>
+
+
+        <h3>ADOPTION</h3>
+
+        <h4>What is the adoption process like?</h4>
+
+        <h5>Step 1: Apply!</h5>
+        <p>Submit an <a href="https://form.jotform.com/241705143426046">application</a> for the dog you are interested in. We will look at all the applications and choose the
+            best fitting match for the dog.
+
+            Some dogs receive several applications and we will only contact the applicant who was approved.
+
+            If your application is approved, we will contact you.</p>
+
+        <h5>Step 2: Meet and Greet!</h5>
+        <p>
+            The second step is to have a meet and greet with the dog. Please remember that we are all volunteers and
+            meet you in our own free time. Please be on time.</p>
+
+        <h5>Step 3: Trial Adoption!</h5>
+        <p>Next the dog will go home with you on a trial basis to ensure that the dog is indeed a good long-term match
+            for you. It is very important to us to
+            make a great match between you and the dog. Before you take the dog home to a trial adoption, you will need
+            to sign the contract and pay the adoption donation fee.</p>
+
+        <p>
+            Our adoption application can be found <a href="https://form.jotform.com/241705143426046">here</a> or send us
+            an email at larsspawsomerescue2024@gmail.com
+        </p>
+        <h4>
+            Do we need to have a fully fenced yard?</h4>
+        <p>
+            No, it is not an absolute requirement. It depends on the dog. Some will do well in a home without a yard,
+            and some will not. We will typically indicate the need for a yard on the dog’s profile. We do NOT allow
+            invisible fences or shock collars for any of our dogs.
+        </p>
+        <h4>Do you adopt to families with children?</h4>
+        <p>
+            Absolutely. Dogs that live with children need higher tolerance levels than most, so we work with you to
+            ensure that the dog you are interested in is suitable for your family.
+        </p>
+
+        <h4>
+            Why do you charge an adoption donation fee? What does it cover? </h4>
+        <p>They are necessary to help support the care of animals in our rescue group. Adoption donations also help to
+            provide care for the other animals in our care, who may have medical bills that are much higher than any
+            possible adoption donations. In addition, the adoption donations received act as a donation to help support
+            our organization as a whole, allowing us to continue our efforts to rescue and find homes for more pets. The
+            adoption donations amounts will be posted on our website which is still in the works.</p>
+
+
+        <h4>Are the dogs trained?</h4>
+        <p>
+            While a dog is in foster care, we will work on trust, potty training and basic comments.
+            But please remember we are not a training facility.
+            Please do NOT ask our fosters to keep a dog for you until the dog is 100 percent trained in your
+            perspective.
+        </p>
+
+        <h4>If I send an application and the dog is adopted by someone else, do I have to apply again?</h4>
+        <p>No, just email us and let us know which dog you’re interested in.</p>
+
+
+        <h4>Why do you require my personal information on the adoption application?</h4>
+        <p>These questions guide us in our matching efforts.</p>
+
+        <h4>
+            Do you adopt to families outside of WA?</h4>
+        <p>
+            We typically only place dogs in Washington and Oregon. In some cases, we choose to keep a certain dog local
+            to us in WA. Because we provide close support during trial adoptions, and even after finalizing an adoption.
+            We do not transport dogs to applicants.
+        </p>
+
+        <h4>Do you have a Wishlist? What items could I donate?</h4>
+        <p>We are happy to take donations! A contribution of leashes, harnesses, collars or food are very
+            helpful for our fosters and dogs. We also have an <a
+                href="https://www.amazon.com/hz/wishlist/ls/1HMYL5H13PSTL?ref=cm_sw_em_r_un_un_JbCcMW0XYnzrK">Amazon
+                Wishlist</a></p>
+
+        <h4>Does filling out the surrender form mean that LPR takes every dog?</h4>
+        <p>We do not always have space for every dog. We also have the right to meet your dog first to see in
+            what conditions your animal is and how he/she behaves around new people.
+
+            We also will need to find a foster home for the animal first.</p>
+
+        <h4>Are the dogs spayed/neutered?</h4>
+        <p>Some of our dogs come from our Partner Rescues and will get spayed neutered when we place them into
+            foster homes.</p>
     </section>
     <section>
         <h2>333 Rule</h2>
-        <figure>
-            <img src="/public/images/333.jpg" class="three-rule" />
-        </figure>
+        <h3>3 Days To Decompress</h3>
+        <ul>
+            <li>Feeling overhelmed</li>
+            <li>May feel scared/unsure of what's going on</li>
+            <li>Not comfortable enough to be themselves</li>
+            <li>Shuts down or hides under furniture</li>
+            <li>Tests the boundaries</li>
+        </ul>
+
+        <h3>3 Weeks To Learn Your Routine</h3>
+        <ul>
+            <li>Starts settling in</li>
+            <li>Feels more comfortable</li>
+            <li>Realizes this could be their forever home</li>
+            <li>Figures out their environment</li>
+            <li>Gets into a routine</li>
+            <li>Lets their guard down</li>
+            <li>May beging to show their true personality</li>
+            <li>Behavior issues may start to appear</li>
+        </ul>
+        <h3>3 Months To Start To Feel At Home</h3>
+        <ul>
+            <li>Finally feels completely comfortable in their home</li>
+            <li>Begins to build trust and a true bond</li>
+            <li>Gains a complete sense of security with their new family</li>
+            <li>Sets into a routine</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Privacy Policy</h2>
+
+        <p>
+            This sets forth the policy and practices regarding Infromation collected from visitors to the Website of
+            Lars's
+            Pawsome Rescue.</p>
+
+        <p>
+            Lars's Pawsome Rescue does not collect any personal information about you (such as name, email. address or
+            phone
+            number) unless you specifically choose to provide such information to us. We will use that information only
+            to
+            respond to you or process a application you have requested. We do not sell information collected on our
+            website
+            to anyone and we will not share information we have collected with any third party other than as necessary
+            to
+            process your application.
+        </p>
+
     </section>
 </body>
 
