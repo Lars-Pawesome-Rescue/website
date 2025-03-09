@@ -13,12 +13,11 @@ module.exports = function () {
       content_type: "adoptable",
     })
     .then(function (response) {
-      const items = response.items.map(function (item) {
-        console.log(item.fields.image.fields)
-        return item;
+      const items = response.items.filter(function (item) {
+        return item.fields.adoptable;
       });
 
-      console.log(`Got ${items.length} items from Contentful`);
+      console.log(`Got ${items.length} adoptable items from Contentful`);
       return items;
     })
     .catch(console.error);

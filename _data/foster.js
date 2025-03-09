@@ -10,15 +10,14 @@ const client = contentful.createClient({
 module.exports = function () {
   return client
     .getEntries({
-      content_type: "foster",
+      content_type: "adoptable",
     })
     .then(function (response) {
-      const items = response.items.map(function (item) {
-        console.log(item.fields.image.fields)
-        return item;
+      const items = response.items.filter(function (item) {
+        return item.fields.fosterable;
       });
 
-      console.log(`Got ${items.length} items from Contentful`);
+      console.log(`Got ${items.length} fosterable items from Contentful`);
       return items;
     })
     .catch(console.error);
