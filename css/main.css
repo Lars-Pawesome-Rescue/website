@@ -4,8 +4,13 @@
     font-family: Roboto, Arial;
 }
 
+section > * {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
 body {
-    margin: 40px auto;
     line-height: 1.6;
     color: #444;
 }
@@ -20,7 +25,6 @@ h1,
 h2,
 h3 {
     margin-top: 10px;
-    text-align: center;
 }
 
 nav {
@@ -47,23 +51,33 @@ section:nth-child(odd) {
     align-items: center;
 }
 
-p {
+p, li {
     padding: 10px;
     font-size: 0.9rem;
 }
 
 li {
     list-style-type: none;
-    padding: 10px;
-    text-align: center;
+    margin-bottom: -15px;
 }
 
 .hero,
-.three-rule,
 .gallery-item {
     max-width: 300px;
     display: block;
     margin: auto;
+}
+
+.gallery-container {
+    max-width: 300px;
+    padding: 15px;
+}
+.gallery-item{
+    box-shadow: 5px 5px #d5d5d5;
+}
+
+section:nth-child(odd) .gallery-item {
+    box-shadow: 5px 5px #60d9b7;
 }
 
 figcaption {
